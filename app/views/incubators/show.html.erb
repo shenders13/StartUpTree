@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @incubator.name %>
-</p>
-
-<%= link_to 'Edit', edit_incubator_path(@incubator) %> |
-<%= link_to 'Back', incubators_path %>
+<div class="incubator-heading">
+  <h1 class="app-heading">Name <small class="white"><%= @incubator.name %></small></h1>
+</div>
+<center>
+<%= link_to 'Edit', edit_incubator_path(@incubator), class: "btn btn-default" %>
+<%= link_to 'Back', incubators_path, class: "btn btn-default" %>
+</center>

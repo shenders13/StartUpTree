@@ -9,6 +9,9 @@
 @import "navbar";
 @import "user";
 
+html {
+  min-height: 100%;
+}
 
 .vincent-bg {
   background-image: url('http://cdns.yournewswire.com/wp-content/uploads/2014/11/the-starry-night-18891.jpg');
@@ -21,10 +24,11 @@
   left:0;
   width: 100%;
   height: 100%;
+  overflow-y:scroll;
+
 }
 
 .gradient-overlay {
-  height: 100%;
   background: rgba(71,207,234,0.97);
   background: -moz-linear-gradient(-45deg, rgba(71,207,234,0.97) 0%, rgba(39,161,171,0.97) 28%, rgba(56,122,129,0.97) 71%, rgba(15,88,102,0.97) 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(71,207,234,0.97)), color-stop(28%, rgba(39,161,171,0.97)), color-stop(71%, rgba(56,122,129,0.97)), color-stop(100%, rgba(15,88,102,0.97)));
@@ -34,6 +38,57 @@
   background: linear-gradient(135deg, rgba(71,207,234,0.97) 0%, rgba(39,161,171,0.97) 28%, rgba(56,122,129,0.97) 71%, rgba(15,88,102,0.97) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47cfea', endColorstr='#0f5866', GradientType=1 );
 }
+
+.table-bg {
+  background: white;
+}
+
+.app-heading {
+  font-family: "Source Sans Pro";
+  font-weight: 100;
+  font-size: 36px;
+  color: white;
+}
+
+.btn-blue {
+  background-image: linear-gradient(-207deg, #1C6C7C 0%, #186A71 14%, #206D75 53%, #0F5866 100%);
+  border-radius: 5px;
+  margin-top: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-blue:hover {
+  background: #1C6C7C;
+  border-radius: 5px;
+  margin-top: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-blue-sm {
+  background-image: linear-gradient(-207deg, #1C6C7C 0%, #186A71 14%, #206D75 53%, #0F5866 100%);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-blue-sm:hover {
+  background: #1C6C7C;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+
+
+
+
+
 
 
 

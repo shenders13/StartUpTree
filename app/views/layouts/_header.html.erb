@@ -2,14 +2,14 @@
   <div class = "collapse navbar-collapse">
     <ul class = "nav navbar-nav">
       <li><img src="http://res.cloudinary.com/small-change/image/upload/v1461426069/tree-24-xxl_jmymdr.png" class="navbar-icon"></li>
-      <li><a href = "#"><i class="fa fa-search" aria-hidden="true"></i> browse startups</a></li>
+      <li><a href = "/start_ups"><i class="fa fa-search" aria-hidden="true"></i> browse startups</a></li>
       <li><a href = "#"><i class="fa fa-area-chart" aria-hidden="true"></i> dashboard</a></li>
       <li><a href = "#"><i class="fa fa-info" aria-hidden="true"></i> about startup tree</a></li>
       <li>
     </ul>
     <ul class="nav navbar-nav navbar-right push-back">
       <li>
-        <% if current_page?('/users/sign_in') %>
+        <% if current_page?('/') %>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-inline' }) do |f| %>
             <%= f.error_notification %>
               <div class="form-inputs form-group">
@@ -22,7 +22,9 @@
           <% end %>
         <% end %>
         <% if current_user %>
-          <li><%= link_to ('<i class="fa fa-sign-in"></i> Sign out').html_safe, destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to ('<i class="fa fa-sign-in"></i> sign out').html_safe, destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to ('<i class="fa fa-sign-in"></i> sign in').html_safe, root_path unless current_page?('/')%></li>
         <% end %>
       </li>
     </ul>

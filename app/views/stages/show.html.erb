@@ -1,19 +1,16 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Stage name:</strong>
-  <%= @stage.stage_name %>
-</p>
-
-<p>
-  <strong>Stage description:</strong>
-  <%= @stage.stage_description %>
-</p>
-
-<p>
-  <strong>Stage icon:</strong>
-  <%= @stage.stage_icon %>
-</p>
-
-<%= link_to 'Edit', edit_stage_path(@stage) %> |
-<%= link_to 'Back', stages_path %>
+<div class="incubator-heading">
+  <div class="stage-box">
+    <h1 class="app-heading">Stage Name <small class="white"><%= @stage.stage_name %></small></h1>
+  </div>
+  <div class="stage-box">
+    <h1 class="app-heading">Stage description <small class="white"><%= @stage.stage_description  %></small></h1>
+  </div>
+  <div class="stage-box">
+    <img src="<%= @stage.stage_icon %>" class="stage_icon" %>
+  </div>
+</div>
+<center>
+<%= link_to 'Edit', edit_stage_path(@stage), class: "btn btn-default" %>
+<%= link_to 'Back', stages_path, class: "btn btn-default" %>
+</center>

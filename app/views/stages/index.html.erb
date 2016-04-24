@@ -1,31 +1,27 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Stages</h1>
-
-<table>
+<div class="incubator-heading">
+  <h1 class="app-heading">Stages</h1>
+</div>
+<table class="table table-hover table-bg">
   <thead>
     <tr>
-      <th>Stage name</th>
-      <th>Stage description</th>
-      <th>Stage icon</th>
-      <th colspan="3"></th>
+    <th>Stage name</th>
+    <th>Stage description</th>
+    <th>Stage icon</th>
+    <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @stages.each do |stage| %>
       <tr>
         <td><%= stage.stage_name %></td>
         <td><%= stage.stage_description %></td>
-        <td><%= stage.stage_icon %></td>
-        <td><%= link_to 'Show', stage %></td>
-        <td><%= link_to 'Edit', edit_stage_path(stage) %></td>
-        <td><%= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><img src="<%= stage.stage_icon %>", class="stage_icon"></td>
+        <td><%= link_to 'Show', stage, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_stage_path(stage), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Stage', new_stage_path %>
+<%= link_to 'New Stage', new_stage_path, class: 'btn btn-blue' %>

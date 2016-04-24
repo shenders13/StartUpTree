@@ -1,27 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Incubators</h1>
-
-<table>
+<div class="incubator-heading">
+  <h1 class="app-heading">Listing Incubators</h1>
+</div>
+<table class="table table-hover table-bg">
   <thead>
     <tr>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @incubators.each do |incubator| %>
       <tr>
         <td><%= incubator.name %></td>
-        <td><%= link_to 'Show', incubator %></td>
-        <td><%= link_to 'Edit', edit_incubator_path(incubator) %></td>
-        <td><%= link_to 'Destroy', incubator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', incubator, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_incubator_path(incubator), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Destroy', incubator, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Incubator', new_incubator_path %>
+<%= link_to 'New Incubator', new_incubator_path, class: 'btn btn-blue' %>
