@@ -1,0 +1,49 @@
+<%= form_for(@start_up) do |f| %>
+  <% if @start_up.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@start_up.errors.count, "error") %> prohibited this start_up from being saved:</h2>
+
+      <ul>
+      <% @start_up.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :short_description %><br>
+    <%= f.text_area :short_description %>
+  </div>
+  <div class="field">
+    <%= f.label :long_description %><br>
+    <%= f.text_area :long_description %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </div>
+  <div class="field">
+    <%= f.label :stage_id %><br>
+    <%= f.number_field :stage_id %>
+  </div>
+  <div class="field">
+    <%= f.label :incubator_id %><br>
+    <%= f.number_field :incubator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br>
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

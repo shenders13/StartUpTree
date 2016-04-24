@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @start_up.name %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @start_up.short_description %>
+</p>
+
+<p>
+  <strong>Long description:</strong>
+  <%= @start_up.long_description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @start_up.image %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @start_up.video %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @start_up.stage_id %>
+</p>
+
+<p>
+  <strong>Incubator:</strong>
+  <%= @start_up.incubator_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @start_up.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_start_up_path(@start_up) %> |
+<%= link_to 'Back', start_ups_path %>

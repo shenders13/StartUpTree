@@ -1,0 +1,26 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "incubators";
+@import "locations";
+@import "messages";
+@import "posts";
+@import "stages";
+@import "start_ups";
+@import "navbar";
+
+
+.vincent-bg {
+  background-image: url('http://cdns.yournewswire.com/wp-content/uploads/2014/11/the-starry-night-18891.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.gradient-overlay {
+  /* Rectangle 2: */
+  opacity: 0.97;
+  background-image: linear-gradient(-207deg, #47CFEA 0%, #27A1AB 23%, #387A81 51%, #0F5866 100%);
+  border: 1px solid #979797;
+}

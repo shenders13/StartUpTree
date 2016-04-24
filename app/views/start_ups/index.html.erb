@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Start Ups</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short description</th>
+      <th>Long description</th>
+      <th>Image</th>
+      <th>Video</th>
+      <th>Stage</th>
+      <th>Incubator</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @start_ups.each do |start_up| %>
+      <tr>
+        <td><%= start_up.name %></td>
+        <td><%= start_up.short_description %></td>
+        <td><%= start_up.long_description %></td>
+        <td><%= start_up.image %></td>
+        <td><%= start_up.video %></td>
+        <td><%= start_up.stage_id %></td>
+        <td><%= start_up.incubator_id %></td>
+        <td><%= start_up.location_id %></td>
+        <td><%= link_to 'Show', start_up %></td>
+        <td><%= link_to 'Edit', edit_start_up_path(start_up) %></td>
+        <td><%= link_to 'Destroy', start_up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Start up', new_start_up_path %>

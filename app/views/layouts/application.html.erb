@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Start Up Tree</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+<body>
+<%= render 'layouts/header' %>
+<div class="vincent-bg">
+  <div class='gradient-overlay'>
+    <div class="container"> 
+      <div class='push-below-navbar'>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
