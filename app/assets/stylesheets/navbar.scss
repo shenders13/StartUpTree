@@ -11,9 +11,9 @@
 
 .navbar-icon {
   width:50px;
-  margin-bottom:10px;
   margin-left:23px;
   margin-right:20px;
+  margin-top: -14px;
 }
 
 .nav {
@@ -26,5 +26,17 @@
 }
 
 .navbar a:hover {
-  color:gray;
+  color:black;
+  background-color: none;
+}
+
+.nav a:hover {
+  color:black;
+  background-color: none;
+}
+
+.navbar .navbar-icon:hover, 
+.navbar .navbar-icon:focus {
+  background-color: transparent;
+  color: #999999;
 }

@@ -9,10 +9,6 @@
 @import "navbar";
 @import "user";
 
-html {
-  min-height: 100%;
-}
-
 .vincent-bg {
   background-image: url('http://cdns.yournewswire.com/wp-content/uploads/2014/11/the-starry-night-18891.jpg');
   background-size: cover;
@@ -29,6 +25,8 @@ html {
 }
 
 .gradient-overlay {
+  overflow-y:scroll;
+  height: 100%;
   background: rgba(71,207,234,0.97);
   background: -moz-linear-gradient(-45deg, rgba(71,207,234,0.97) 0%, rgba(39,161,171,0.97) 28%, rgba(56,122,129,0.97) 71%, rgba(15,88,102,0.97) 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(71,207,234,0.97)), color-stop(28%, rgba(39,161,171,0.97)), color-stop(71%, rgba(56,122,129,0.97)), color-stop(100%, rgba(15,88,102,0.97)));
