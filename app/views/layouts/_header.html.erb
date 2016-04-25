@@ -9,7 +9,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right push-back">
       <li>
-        <% if current_page?('/') %>
+        <% if current_page?(:controller => 'devise/sessions', :action => 'new') %>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-inline' }) do |f| %>
             <%= f.error_notification %>
               <div class="form-inputs form-group">
@@ -24,19 +24,10 @@
         <% if current_user %>
           <li><%= link_to ('<i class="fa fa-leaf" aria-hidden="true"></i> leave').html_safe, destroy_user_session_path, method: :delete %></li>
           <% else %>
-          <li><%= link_to ('<i class="fa fa-sign-in"></i> sign in').html_safe, root_path unless current_page?('/')%></li>
+          <li><%= link_to ('<i class="fa fa-sign-in"></i> sign in').html_safe, new_user_session_path unless current_page?(:controller => 'devise/sessions', :action => 'new')%></li>
         <% end %>
       </li>
     </ul>
   </div>
 </header>
-
-
-
-
-
-
-        
-
-
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424092700) do
+ActiveRecord::Schema.define(version: 20160425042101) do
 
   create_table "incubators", force: :cascade do |t|
     t.string   "name"
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 20160424092700) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.boolean  "start_up"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
