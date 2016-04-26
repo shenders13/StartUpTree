@@ -16,8 +16,8 @@
             <%= f.input_field :last_name, required: true, autofocus: true, label: false, placeholder: 'Last Name', class: 'sign-up-form-last-name' %>
             <%= f.input_field :email, required: true, autofocus: true, label: false, placeholder: 'Email', class: 'sign-up-form' %>
             <%= f.input_field :password, required: true, autofocus: true, label: false, placeholder: 'Password', class: 'sign-up-form' %>
-            <div class="form-inline radios">
-              <%= f.input :start_up, :collection => ["  I'm a startup", "  I'm not a startup"], as: :radio_buttons, label: false, class:"user_radio_buttons" %>
+            <div class="radios">
+              <%= f.input :start_up, :collection => [true, false], as: :radio_buttons, label: "I'm a start up.", class:"user_radio_buttons" %>
             </div>
           </div>
         </div>
