@@ -1,10 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   protected
 
-  def after_inactive_sign_up_path_for(resource)
-    if current_user.start_up
-    else
-      redirect_to stages_path
-      #*1000
-    end
+  def after_sign_up_path_for(resource)
+    User.all.last.start_up ? '/start_ups/new' : '/'
+  end
 end

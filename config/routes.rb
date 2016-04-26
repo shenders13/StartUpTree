@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
 
   resources :messages
   resources :incubators
@@ -8,11 +8,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :start_ups
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-
   authenticated :user do
     root 'posts#index', as: :authenticated_root
   end
@@ -20,8 +15,6 @@ Rails.application.routes.draw do
   devise_scope :user do
       root to: "devise/sessions#new"
   end
-
-  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
