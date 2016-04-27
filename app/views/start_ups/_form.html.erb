@@ -1,49 +1,32 @@
-<%= form_for(@start_up) do |f| %>
-  <% if @start_up.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@start_up.errors.count, "error") %> prohibited this start_up from being saved:</h2>
-
-      <ul>
-      <% @start_up.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class='col-xs-12 col-sm-8 col-sm-2 col-md-6 col-md-offset-3'>
+  <%= simple_form_for(@start_up) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :name, :required => true, class: "startup-form", placeholder: "name of start up", label: false%>
+      <%= f.input :short_description, :required => true, class: "startup-form", placeholder: "short description (max 50 characters)", label: false%>
+      <%= f.input :long_description, :required => true, class: "startup-form", placeholder: "long description (max 600 characters)", label: false%>
+      <%= f.input :image, :required => true, class: "startup-form", placeholder: "logo url", label: false%>
+      <%= f.input :video, :required => true, class: "startup-form", placeholder: "video url. stuck? do a short YouTube video of your pitch", label: false%>
+      <%= f.input :stage_id, :collection => Stage.all.pluck(:stage_name), :required => true, class: "startup-form", placeholder: "stage", label: false%>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-blue" %>
+      <%= link_to 'Back', start_ups_path, class: "btn btn-blue" %>
     </div>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :short_description %><br>
-    <%= f.text_area :short_description %>
-  </div>
-  <div class="field">
-    <%= f.label :long_description %><br>
-    <%= f.text_area :long_description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video %>
-  </div>
-  <div class="field">
-    <%= f.label :stage_id %><br>
-    <%= f.number_field :stage_id %>
-  </div>
-  <div class="field">
-    <%= f.label :incubator_id %><br>
-    <%= f.number_field :incubator_id %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br>
-    <%= f.number_field :location_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+
+
+
+
+
+    t.string   "video"
+    t.integer  "stage_id"
+    t.integer  "incubator_id"
+    t.integer  "location_id"
+
+
+
+
