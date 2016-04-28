@@ -1,3 +1,44 @@
+.btn-blue-start-up {
+  background-image: linear-gradient(-207deg, #1C6C7C 0%, #186A71 14%, #206D75 53%, #0F5866 100%);
+  border-radius: 5px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 100%;
+  color: white;
+  font-weight: 100;
+  font-size: 34px;
+  text-align: center;
+  border: solid 1px rgba(255, 255, 255, 0.52)
+}
+
+.btn-blue-start-up:hover {
+  color:white;
+  background-image: linear-gradient(-207deg, #3BBACC 0%, #38B6C7 14%, #29A0AB 53%, #30ACBB 100%);
+}
+
+label.select {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 100;
+}
+
+.pull-up {
+  margin-top:-20px;
+}
+
+.dont-read {
+  font-weight: 100;
+  color: white;
+  margin-top: -17px;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+.lower {
+  margin-top:50px;
+}
 
 input#start_up_name {
 border-radius: 6px;
@@ -59,7 +100,7 @@ font-size: 18px;
 line-height: 1.3333333;
 width: 100%;
 border: none;
-margin-bottom: 20px;
+margin-bottom: 30px;
 font-family: "Source Sans Pro";
 font-weight: 100;
 }
@@ -85,7 +126,39 @@ font-size: 18px;
 line-height: 1.3333333;
 width: 100%;
 border: none;
-margin-bottom: 20px;
+margin-bottom: 9px;
 font-family: "Source Sans Pro";
 font-weight: 100;
+color: black;
+background-color: white
+}
+
+select#start_up_incubator_id {
+border-radius: 6px;
+height: 48px;
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.3333333;
+width: 100%;
+border: none;
+margin-bottom: 9px;
+font-family: "Source Sans Pro";
+font-weight: 100;
+color: black;
+background-color: white
+}
+
+select#start_up_location_id {
+border-radius: 6px;
+height: 48px;
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.3333333;
+width: 100%;
+border: none;
+margin-bottom: 9px;
+font-family: "Source Sans Pro";
+font-weight: 100;
+color: black;
+background-color: white
 }
