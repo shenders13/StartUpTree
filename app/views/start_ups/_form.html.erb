@@ -13,6 +13,7 @@
           <%= f.input :stage_id, :collection => Stage.all.pluck(:stage_name), class: "startup-form", placeholder: "stage", label: 'Stage'%>
           <%= f.input :incubator_id, :collection => Incubator.all.pluck(:name), class: "startup-form", placeholder: "stage", label: 'Incubator'%>
           <%= f.input :location_id, :collection => Location.all.pluck(:city), class: "startup-form", placeholder: "stage", label: 'City'%>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
       </div>
       <div class="form-actions">
         <%= f.button :submit, class: "btn btn-blue-start-up", value: "Create" %>
