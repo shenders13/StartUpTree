@@ -10,9 +10,19 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+
+        <% @their_startup = StartUp.find_by_user_id(current_user.id) if current_user && StartUp.pluck(:user_id).include?(current_user.id) %>
+        <% if @their_startup.present? %>
+          <li><a href = "/start_ups/<%= @their_startup.id %>"><i class="fa fa-building-o" aria-hidden="true"></i><span class="suname"> <%= @their_startup.name %></span></a></li>
+        <% end %>
+
+
+
         <li><a href = "/start_ups"><i class="fa fa-search" aria-hidden="true"></i> browse startups</a></li>
         <li><a href = "#"><i class="fa fa-area-chart" aria-hidden="true"></i> dashboard</a></li>
-        <li><a href = "#"><i class="fa fa-info" aria-hidden="true"></i> about startup tree</a></li>
+        <% unless current_user %>
+          <li><a href = "#"><i class="fa fa-info" aria-hidden="true"></i> about startup tree</a></li>
+        <% end %>
         <div class="visible-xs mobile-sign-in">
           <li><a href = "/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> sign in</a></li>
         </div>

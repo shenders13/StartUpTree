@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :first_name, :last_name, :password, :start_up) }
   end
 
-   def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(resource)
     "/start_ups/new"
   end
 
