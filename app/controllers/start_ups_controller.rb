@@ -10,6 +10,19 @@ class StartUpsController < ApplicationController
   # GET /start_ups/1
   # GET /start_ups/1.json
   def show
+    if @start_up.stage_id == 5
+      @mobile_graphic_url = "http://res.cloudinary.com/small-change/image/upload/v1462195241/idea_mobile_eil6uj.png"
+      @graphic_large_url = "http://res.cloudinary.com/small-change/image/upload/v1461927711/idea_s2xbdp.png"
+    elsif @start_up.stage_id == 6
+      @mobile_graphic_url = "http://res.cloudinary.com/small-change/image/upload/v1462195255/mvp_mobile_ppss9q.png"
+      @graphic_large_url = "http://res.cloudinary.com/small-change/image/upload/v1461927729/mvp_ippmsx.png"
+    elsif @start_up.stage_id == 7
+      @mobile_graphic_url = "http://res.cloudinary.com/small-change/image/upload/v1462195266/pm_fit_mobile_vgcmqu.png"
+      @graphic_large_url = "http://res.cloudinary.com/small-change/image/upload/v1461927741/pm_fit_os4fuo.png"
+    elsif @start_up.stage_id === 8
+      @mobile_graphic_url = "http://res.cloudinary.com/small-change/image/upload/v1462195277/growth_mobile_hrmqcz.png"
+      @graphic_large_url = "http://res.cloudinary.com/small-change/image/upload/v1461927755/growth_vycutm.png"
+    end
   end
 
   # GET /start_ups/new

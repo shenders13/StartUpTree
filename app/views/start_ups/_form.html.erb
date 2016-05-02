@@ -10,7 +10,7 @@
         <%= f.input :video, :required => true, class: "startup-form", placeholder: "video url. stuck? do a short YouTube video of your pitch", label: false%>
         <p class=" dont-read pull-right"> *people don't read. the description is mainly for keen beans... </p>
     
-          <%= f.input :stage_id, :collection => Stage.all.pluck(:stage_name), class: "startup-form", placeholder: "stage", label: 'Stage'%>
+          <%= f.association :stage, label_method: :stage_name, value_method: :id, class: "startup-form", placeholder: "stage", label: 'Stage'%>
           <%= f.input :incubator_id, :collection => Incubator.all.pluck(:name), class: "startup-form", placeholder: "stage", label: 'Incubator'%>
           <%= f.input :location_id, :collection => Location.all.pluck(:city), class: "startup-form", placeholder: "stage", label: 'City'%>
           <%= f.hidden_field :user_id, :value => current_user.id %>

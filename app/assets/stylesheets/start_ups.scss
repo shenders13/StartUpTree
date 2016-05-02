@@ -40,6 +40,70 @@ label.select {
   margin-top:50px;
 }
 
+.title-panel {
+  background-color:#CFE8EB;
+  height: 153px;
+  margin-top:6px;
+  margin-bottom:15px;
+}
+
+.start-up-name {
+  font-size:18px;
+  font-weight: 900;
+}
+
+.company-logo {
+  width:100%;
+  box-shadow: 5px 5px 3px #888888;
+  margin-top: 24px;
+}
+
+.start_up_intro {
+  margin-left:0px;
+}
+
+.short-des {
+  font-family: "Source Sans Pro";
+  font-weight: 100;
+  font-size: 15px;
+  margin-bottom: -6px;
+}
+
+.contact-box {
+  margin-left:10px;
+  margin-top:41px; 
+   text-align: center;
+
+}
+
+i.fa.fa-envelope.fa-2x.visible-xs {
+  padding-right: 10px;
+}
+
+.olive-branch {
+  text-align: center;
+  font-weight: 100;
+  margin-top: 9px;
+}
+
+.stage-graphic {
+}
+
+.stage-panel {
+  background-color:#CFE8EB;
+  height: 64px;
+  border-radius:5px;
+  margin-top:15px;
+}
+
+.mobile-envelope {
+  padding-bottom: 10px;
+}
+
+.video-panel {
+  margin: 15px -0px 0px -15px;
+}
+
 input#start_up_name {
 border-radius: 6px;
 height: 48px;
