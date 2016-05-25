@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'carrierwave'
 gem 'devise', '~> 4.0.1'
 gem 'hirb'
 gem 'jquery-rails'
@@ -22,4 +23,3 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-

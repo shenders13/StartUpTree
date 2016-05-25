@@ -8,4 +8,6 @@ class StartUp < ActiveRecord::Base
   validates :incubator_id, presence: true
   validates :location_id, presence: true
 
+  mount_uploader :image, StartUpsImageUploader
+
 end
