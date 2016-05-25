@@ -50,3 +50,18 @@ input#stage_stage_icon{
   color: white;
 
 }
+
+.btn-white {
+  background-color: #333333;
+  width: 10vh;
+  border-radius: 5px;
+  margin-top: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-white:hover {
+  background-color: white;
+  color: black;
+  
+}
