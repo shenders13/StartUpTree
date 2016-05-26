@@ -6,12 +6,19 @@
         <%= f.input :name, :required => true, class: "startup-form", placeholder: "name of start up", label: false%>
         <%= f.input :short_description, :required => true, class: "startup-form", placeholder: "short description (max 50 characters)", label: false%>
         <%= f.input :long_description, :required => true, class: "startup-form", placeholder: "long description (max 600 characters)", label: false%>
+<<<<<<< HEAD
         <div class="carrierwave-field">
         <%= f.input :image, :required => true, class: "startup-form", placeholder: "logo url", label: false, width: "100%" %>
         </div>
         <%= f.input :video, :required => false, class: "startup-form", placeholder: "video url. stuck? do a short YouTube video of your pitch", label: false%>
         <p class=" dont-read pull-right"> *people don't read. the description is mainly for keen beans... </p>
 
+=======
+        <%= f.input :image, :required => true, class: "startup-form", placeholder: "logo url", label: false%>
+        <%= f.input :video, :required => true, class: "startup-form", placeholder: "video url. stuck? do a short YouTube video of your pitch", label: false%>
+        <p class=" dont-read pull-right"> *people don't read. the description is mainly for keen beans... </p>
+    
+>>>>>>> a43a0fb97eb2bdf5e97926e2186b310cd461c914
           <%= f.input :stage_id, :collection => Stage.all.pluck(:stage_name), class: "startup-form", placeholder: "stage", label: 'Stage'%>
           <%= f.input :incubator_id, :collection => Incubator.all.pluck(:name), class: "startup-form", placeholder: "stage", label: 'Incubator'%>
           <%= f.input :location_id, :collection => Location.all.pluck(:city), class: "startup-form", placeholder: "stage", label: 'City'%>
@@ -22,3 +29,11 @@
     </div>
   <% end %>
 </div>
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> a43a0fb97eb2bdf5e97926e2186b310cd461c914

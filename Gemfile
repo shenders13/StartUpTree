@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
+<<<<<<< HEAD
 gem 'carrierwave'
+=======
+>>>>>>> a43a0fb97eb2bdf5e97926e2186b310cd461c914
 gem 'devise', '~> 4.0.1'
 gem 'hirb'
 gem 'jquery-rails'
